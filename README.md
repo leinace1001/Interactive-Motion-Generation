@@ -18,9 +18,7 @@ To train the model, you should access Interhuman dataset (https://github.com/tr3
 You can train the model with this command:
 
 ```shell
-PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \
-srun -p ${PARTITION} -n8 --gres=gpu:8 -u \
-    python -u tools/train.py \
+python -u tools/train.py \
     --name interhuman_bs32 \
     --batch_size 32 \
     --times 1 \
